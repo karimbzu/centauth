@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Firebase Web login Page</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+    <input type="password" placeholder="Confirm Password..." id="confirmpassword_field" />
+    <button onclick="login()">Login to Account</button>
+    <button onclick="signInWithGoogle()" style="margin-top: 5px">Sign In with Google</button>
+    <button onclick="signInWithFacebook()" style="margin-top: 5px">Sign In with Facebook</button>
+    <button onclick="signup()" style="margin-top: 5px">New Account</button>
+    <button onclick="clean()" style="margin-top: 5px">Clear Form</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="profile()" style="margin-top: 5px"> User Profile</button>
+    <button onclick="logout()" style="margin-top: 5px">Logout</button> 
+    
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.0/firebase-storage.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyD2U6d5L45i21efvI8gkBCQsdIH1EIt3GY",
+    authDomain: "centurion-auth.firebaseapp.com",
+    databaseURL: "https://centurion-auth.firebaseio.com",
+    projectId: "centurion-auth",
+    storageBucket: "centurion-auth.appspot.com",
+    messagingSenderId: "684314499073",
+    appId: "1:684314499073:web:a62019fffdcd4a6ede0800",
+    measurementId: "G-4NWEFT4RQY"
+};
+firebase.initializeApp(config);
+</script>
+<script src="server.js"></script>
+<script src = "https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>
+
